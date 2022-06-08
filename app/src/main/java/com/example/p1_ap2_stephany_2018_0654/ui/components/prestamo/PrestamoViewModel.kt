@@ -1,4 +1,4 @@
-package com.example.p1_ap2_stephany_2018_0654.ui.components.persona
+package com.example.p1_ap2_stephany_2018_0654.ui.components.prestamo
 
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
