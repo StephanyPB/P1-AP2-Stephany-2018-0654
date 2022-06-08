@@ -5,8 +5,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Add
-import androidx.compose.material.icons.filled.Person
+import androidx.compose.material.icons.filled.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
@@ -46,7 +45,7 @@ fun RegistroPrestamoScreen(navHostController: NavHostController, viewModel: Pres
                     },
                     leadingIcon = {
                         Icon(
-                            imageVector = Icons.Default.Person,
+                            imageVector = Icons.Default.Info,
                             contentDescription = null)
                     }
                 )
@@ -55,7 +54,7 @@ fun RegistroPrestamoScreen(navHostController: NavHostController, viewModel: Pres
                     label = { Text("Monto:") },
                     leadingIcon = {
                         Icon(
-                            imageVector = Icons.Default.Add,
+                            imageVector = Icons.Default.ShoppingCart,
                             contentDescription = null) },
                     value = viewModel.monto,
                     onValueChange = { viewModel.monto = it },
