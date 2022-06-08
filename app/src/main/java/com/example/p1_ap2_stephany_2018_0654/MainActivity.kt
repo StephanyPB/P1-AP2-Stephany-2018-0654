@@ -35,12 +35,12 @@ fun MyApps() {
         ) {
             val navHostController = rememberNavController()
 
-            NavHost(navController = navHostController, startDestination = "ConsultaParcial") {
-                composable("ConsultaParcial") {
-                    ConsutaParcialScreen(navHostController = navHostController)
+            NavHost(navController = navHostController, startDestination = "ConsultaPrestamo") {
+                composable("ConsultaPrestamo") {
+                    ConsutaPrestamoScreen(navHostController = navHostController)
                 }
-                composable("RegistroParcial") {
-                    RegistroParcialScreen(navHostController = navHostController)
+                composable("RegistroPrestamo") {
+                    RegistroPrestamoScreen(navHostController = navHostController)
                 }
 
             }
