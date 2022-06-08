@@ -10,6 +10,9 @@ import kotlinx.parcelize.Parcelize
 data class Parcial1(
     @PrimaryKey(autoGenerate = true)
     val parcialId: Int=0,
+    val deudor: String,
+    val concepto: String ="",
+    val monto: Float = 0f
 
 ): Parcelable
 
