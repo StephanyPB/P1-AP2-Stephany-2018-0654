@@ -5,11 +5,11 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 import kotlinx.parcelize.Parcelize
 
-@Entity(tableName = "Parcial")
+@Entity(tableName = "Prestamos")
 @Parcelize
-data class Parcial1(
+data class Prestamo(
     @PrimaryKey(autoGenerate = true)
-    val parcialId: Int=0,
+    val prestamoId: Int=0,
     val deudor: String,
     val concepto: String ="",
     val monto: Float = 0f
