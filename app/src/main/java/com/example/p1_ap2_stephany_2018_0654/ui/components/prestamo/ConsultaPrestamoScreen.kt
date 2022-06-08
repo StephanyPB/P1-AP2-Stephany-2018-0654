@@ -1,4 +1,4 @@
-package com.example.p1_ap2_stephany_2018_0654.ui.components.persona
+package com.example.p1_ap2_stephany_2018_0654.ui.components.prestamo
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -15,6 +15,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
+import com.example.p1_ap2_stephany_2018_0654.ui.components.prestamo.PrestamoViewModel
 
 @Composable
 fun ConsutaPrestamoScreen( navHostController: NavHostController, viewModel: PrestamoViewModel = hiltViewModel()
@@ -23,12 +24,12 @@ fun ConsutaPrestamoScreen( navHostController: NavHostController, viewModel: Pres
 
     Scaffold(
         topBar ={
-            TopAppBar(title = { Text( "Consulta Parcial") })
+            TopAppBar(title = { Text( "Consulta Prestamo") })
         },
         floatingActionButton = {
             FloatingActionButton(
                 onClick = {
-                    navHostController.navigate("RegistroParcial")
+                    navHostController.navigate("RegistroPrestamo")
                 },
                 backgroundColor = MaterialTheme.colors.primary
             ) {
