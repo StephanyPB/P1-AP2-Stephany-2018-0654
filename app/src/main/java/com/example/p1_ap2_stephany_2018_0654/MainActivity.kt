@@ -12,7 +12,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.example.p1_ap2_stephany_2018_0654.ui.components.persona.*
+import com.example.p1_ap2_stephany_2018_0654.ui.components.prestamo.*
+import com.example.p1_ap2_stephany_2018_0654.ui.components.prestamo.RegistroPrestamoScreen
 import com.example.p1_ap2_stephany_2018_0654.ui.theme.P1AP2Stephany20180654Theme
 import com.example.p1_ap2_stephany_2018_0654.util.Screen
 import dagger.hilt.android.AndroidEntryPoint
