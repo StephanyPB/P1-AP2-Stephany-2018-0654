@@ -79,8 +79,6 @@ fun RegistroPrestamoScreen(navHostController: NavHostController, viewModel: Pres
                         else{
                             Toast.makeText(context, "Transacion fallida", Toast.LENGTH_SHORT).show()
                         }
-
-
                     },
                     modifier = Modifier
                         .fillMaxWidth()
