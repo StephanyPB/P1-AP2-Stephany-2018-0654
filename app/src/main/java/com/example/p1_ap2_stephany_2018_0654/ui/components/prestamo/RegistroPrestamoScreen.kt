@@ -86,7 +86,7 @@ fun RegistroPrestamoScreen(navHostController: NavHostController, viewModel: Pres
 fun validate(number:String): Boolean {
     val validation = number.toDouble()
 
-    if (validation >= 0){
+    if (validation >= 1){
         return true
     }else{
         return false
