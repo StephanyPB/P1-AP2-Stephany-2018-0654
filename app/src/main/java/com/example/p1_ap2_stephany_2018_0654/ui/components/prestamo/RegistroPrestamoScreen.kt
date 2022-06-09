@@ -19,10 +19,6 @@ import com.example.p1_ap2_stephany_2018_0654.ui.components.prestamo.PrestamoView
 @Composable
 fun RegistroPrestamoScreen(navHostController: NavHostController, viewModel: PrestamoViewModel = hiltViewModel()
  ){
-
-    var valDeudor by rememberSaveable { mutableStateOf(false) }
-    var valConcepto by rememberSaveable { mutableStateOf(false) }
-    var valMonto by rememberSaveable { mutableStateOf(false) }
     val context = LocalContext.current
     Scaffold(
         topBar = { TopAppBar(title = { Text(text = "Registro Prestamos") }) }
@@ -69,15 +65,11 @@ fun RegistroPrestamoScreen(navHostController: NavHostController, viewModel: Pres
 
                 Button(
                     onClick = {
-                        valDeudor = viewModel.deudor.isBlank()
-                        valConcepto = viewModel.deudor.isBlank()
-                        valMonto = viewModel.deudor.isBlank()
-                        if(!valDeudor && !valConcepto && !valMonto){
+                        if (validate(viewModel.monto)){
                             viewModel.Guardar()
                             navHostController.navigateUp()
-                        }
-                        else{
-                            Toast.makeText(context, "Transacion fallida", Toast.LENGTH_SHORT).show()
+                        }else{
+                            Toast.makeText(context, "Transaccion Fallida", Toast.LENGTH_SHORT).show()
                         }
                     },
                     modifier = Modifier
@@ -88,5 +80,15 @@ fun RegistroPrestamoScreen(navHostController: NavHostController, viewModel: Pres
 
                 }
             }
+    }
+}
+
+fun validate(number:String): Boolean {
+    val validation = number.toDouble()
+
+    if (validation >= 0){
+        return true
+    }else{
+        return false
     }
 }
