@@ -1,9 +1,6 @@
 package com.example.p1_ap2_stephany_2018_0654.ui.components.prestamo
 
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.*
@@ -16,6 +13,7 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
 import com.example.p1_ap2_stephany_2018_0654.ui.components.prestamo.PrestamoViewModel
+import com.example.p1_ap2_stephany_2018_0654.ui.components.row.RowPrestamo
 
 @Composable
 fun ConsutaPrestamoScreen( navHostController: NavHostController, viewModel: PrestamoViewModel = hiltViewModel()
@@ -43,12 +41,16 @@ fun ConsutaPrestamoScreen( navHostController: NavHostController, viewModel: Pres
 
                LazyColumn(modifier = Modifier.fillMaxWidth()) {
                    items(listaPrestamos.value) { prestamo ->
-                       Row() {
-                           Text( "${prestamo.prestamoId}\t\t\t " +
-                                   "${prestamo.deudor}\t\t\t " +
-                                   "${prestamo.concepto}\t\t\t " +
-                                   "${prestamo.monto}")
-                       }
+                       RowPrestamo(prestamo = prestamo)
+
+                       Spacer(
+                           modifier = Modifier.height(3.dp))
+                       Divider(
+                           modifier = Modifier
+                               .fillMaxWidth().width(2.dp),
+                           color = androidx.compose.ui.graphics.Color.Black)
+                       Spacer(
+                           modifier = Modifier.height(3.dp))
                    }
                }
             }
