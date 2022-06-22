@@ -63,7 +63,7 @@ fun RegistroPrestamoScreen(navHostController: NavHostController, viewModel: Pres
                     modifier = Modifier.fillMaxWidth()
                 )
 
-                Button(
+                OutlinedButton(
                     onClick = {
                         if (validate(viewModel.monto)){
                             viewModel.Guardar()
